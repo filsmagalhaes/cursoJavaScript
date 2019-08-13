@@ -1,0 +1,77 @@
+
+#### executar codigo ####
+
+Com node instalado e a extensão "code runner" é só digitar:
+ctrl + alt + n
+executará no terminal do VS code.
+
+#### ATRIBUIÇÕES NAS VARIÁVEIS #####
+
+1.Por Referência: Variável ou constante apontam para o mesmo endereço de memória.
+2.Por Valor: Faço uma copia do valor e cada variável ou constante tem seu vlor independente
+
+Ex.: atribuição por referência
+
+cont a = {
+    name: 'teste'
+}
+
+console.log(a) //resposta: {name: "teste"}
+
+const b = a // Igualei os endereços. Endereço de A para B. B e A tem a referência do objetos.
+b.name = 'Opa'  // Quando ocorre a mudanças os 2 "percebem"
+console.log(a) // Resposta: {name: "Opa"}
+
+Ex2.: atribuição por valor
+
+let c = 3
+let d = c
+d++ // incrementado
+console.log(d) // resposta 3
+console.log(d) // resposta 4
+console.log(c) // resposta 3 // Tipos primitivos: copia por valor. Possum valores independentes.
+
+
+#### FUNÇÃO ####
+
+função é o verbo - ação - executa uma ação baseada na sequencia de código.
+função define o bloco associado
+função, copor da função (delimitado pelas chaves)
+no final, é retornado um resultado.
+
+Possibilidades válidas:
+
+1. uma função pode receber parametros ou não;
+2. uma função pode não retornar dados;
+3. uma função pode receber dados de entrada e não retornar nada;
+4. uma função pode não receber dados de entrada e retornar algo;
+
+#### DESTRUCTING ES2015 ####
+
+O QUE É: Quebra de um objeto para ser acessado em uma variável local.
+
+POR QUE: Tornar mais fácil o manuseio de "Option Objects"
+
+QUANDO UAR:
+
+1. atribir variaveis a objetos
+
+var voxel = {x: 3.6, y : 7.4, z : 6,54}
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z; //forma normal de chamar as váriáveis com a notação ponto.
+
+1.1 desctructing:
+
+var voxel = {x: 3.6, y : 7.4, z : 6,54}
+const {x,y,z} = voxel //desctructing!
+console.log(x)
+
+2. atribir variaveis a objetos dentro de outro objeto
+
+const nest = {
+    start: {x: 5, y: 6}
+    end: {x: 6, y: -9}
+}
+const start{start : {x: startX, y: startY}} = nest // foi feito o desctructing dentro do objeto start extraindo x e y.
+console.log(startX) //5
