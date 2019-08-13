@@ -1,0 +1,10 @@
+Sequencia para clonar, comitar e enviar arquivos para nuvem:
+
+git init
+
+git status
+git add .
+git commit -m "mensagem aqui"
+git push
+
+git clone + URL //se precisar baixar um clone do repositório.
