@@ -8,7 +8,7 @@ soBoaNoticia(8.1)
 soBoaNoticia(6.1)
 
 function seForVerdadeEuFalo(valor) {
-    if(valor) {
+    if(valor) { //uma unica variável o JS converte para verdadeiro ou falso. Só irá imprimrir os verdadeiros.
         console.log('É verdade... ' + valor)
     }
 }
