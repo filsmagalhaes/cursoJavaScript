@@ -3,7 +3,7 @@ function soma1(a, b, c) {
     a = a || 1
     b = b || 1
     c = c || 1
-    return a + b + c
+    return a + b + c // se na chamada da função não for inserido nenhum valor, o JS interpretará como undefined e adotará o segundop valor como parâmetro.
 }
 
 console.log(soma1(), soma1(3), soma1(1, 2, 3), soma1(0, 0, 0))
